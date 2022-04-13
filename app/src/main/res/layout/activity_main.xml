@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/fname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/lname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/lname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/e_mail"
+            app:layout_constraintEnd_toEndOf="@+id/fname"
+            app:layout_constraintStart_toStartOf="@+id/fname"
+            app:layout_constraintTop_toBottomOf="@+id/fname" />
+
+        <TextView
+            android:id="@+id/e_mail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/uname"
+            app:layout_constraintEnd_toEndOf="@+id/lname"
+            app:layout_constraintStart_toStartOf="@+id/lname"
+            app:layout_constraintTop_toBottomOf="@+id/lname" />
+
+        <TextView
+            android:id="@+id/uname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/upassword"
+            app:layout_constraintEnd_toEndOf="@+id/e_mail"
+            app:layout_constraintStart_toStartOf="@+id/e_mail"
+            app:layout_constraintTop_toBottomOf="@+id/e_mail" />
+
+        <TextView
+            android:id="@+id/upassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/uname"
+            app:layout_constraintStart_toStartOf="@+id/uname"
+            app:layout_constraintTop_toBottomOf="@+id/uname" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

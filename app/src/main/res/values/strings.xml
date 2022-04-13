@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LoginSignup</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="enter_e_mail_address">Enter E-mail Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="button">Button</string>
+    <string name="enter_email_username">Enter Email/Username</string>
+</resources>

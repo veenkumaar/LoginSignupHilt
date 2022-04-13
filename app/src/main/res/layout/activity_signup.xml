@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="signup"
+            type="com.example.loginsignup.activity.signup.SignupViewModel" />
+    </data>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".activity.signup.SignupActivity">
+
+            <EditText
+                android:id="@+id/et_firstname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/enter_first_name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@{signup.firstname}"
+                app:layout_constraintBottom_toTopOf="@+id/et_lastname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/et_lastname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/enter_last_name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="@{signup.lastname}"
+                app:layout_constraintBottom_toTopOf="@+id/et_email"
+                app:layout_constraintEnd_toEndOf="@+id/et_firstname"
+                app:layout_constraintStart_toStartOf="@+id/et_firstname"
+                app:layout_constraintTop_toBottomOf="@+id/et_firstname" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/enter_e_mail_address"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:text="@{signup.emailadd}"
+                app:layout_constraintBottom_toTopOf="@+id/et_password"
+                app:layout_constraintEnd_toEndOf="@+id/et_lastname"
+                app:layout_constraintStart_toStartOf="@+id/et_lastname"
+                app:layout_constraintTop_toBottomOf="@+id/et_lastname" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:text="@{signup.password}"
+                app:layout_constraintBottom_toTopOf="@+id/et_confirm_password"
+                app:layout_constraintEnd_toEndOf="@+id/et_email"
+                app:layout_constraintStart_toStartOf="@+id/et_email"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+            <EditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/enter_confirm_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:text="@{signup.confirm_password}"
+                app:layout_constraintBottom_toTopOf="@+id/bt_submit"
+                app:layout_constraintEnd_toEndOf="@+id/et_password"
+                app:layout_constraintStart_toStartOf="@+id/et_password"
+                app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/et_confirm_password"
+                app:layout_constraintStart_toStartOf="@+id/et_confirm_password"
+                app:layout_constraintTop_toBottomOf="@+id/et_confirm_password" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/et_firstname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/bt_logiin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="Login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_submit" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
